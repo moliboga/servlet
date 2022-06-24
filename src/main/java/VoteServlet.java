@@ -4,9 +4,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-public class DemoServlet extends HttpServlet {
+public class VoteServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         int age = Integer.parseInt(req.getParameter("page"));
@@ -14,7 +13,7 @@ public class DemoServlet extends HttpServlet {
         req.setAttribute("name", req.getParameter("pname"));
         req.setAttribute("common", getServletConfig().getInitParameter("commonTextColor"));
         req.setAttribute("error", getServletConfig().getInitParameter("errorTextColor"));
-        req.setAttribute("welcome", getServletConfig().getInitParameter("commonTextColor"));
+        req.setAttribute("welcome", getServletConfig().getInitParameter("welcomeTextColor"));
         req.setAttribute("yearsTo18", 18 - age);
 
         RequestDispatcher requestDispatcher;
@@ -31,7 +30,6 @@ public class DemoServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
-        // call doPost() method
-        doPost(req, res);
+       doPost(req, res);
     }
 }

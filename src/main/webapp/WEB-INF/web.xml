@@ -1,11 +1,7 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
 <web-app>
   <servlet>
     <servlet-name>vote</servlet-name>
-    <servlet-class>DemoServlet</servlet-class>
+    <servlet-class>VoteServlet</servlet-class>
     <init-param>
       <param-name>errorTextColor</param-name>
       <param-value>red</param-value>
@@ -22,6 +18,15 @@
   <servlet-mapping>
     <servlet-name>vote</servlet-name>
     <url-pattern>/checkvoter</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>sex</servlet-name>
+    <servlet-class>SexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sex</servlet-name>
+    <url-pattern>/checksex</url-pattern>
   </servlet-mapping>
 
   <filter>

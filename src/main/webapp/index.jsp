@@ -8,13 +8,10 @@
 </head>
 <body>
 
-<h1> Student Registration Page</h1>
+<h1>Start page</h1>
 <div>
-    <form action='checkvoter' method="POST">
-        Person Name:: <input type="text" name="pname"><br><br>
-        Person Age:: <input type="password" name="page"><br><br>
-        <input type="submit" value="Check Voting Eligibility">
-    </form>
+    <a href="voteChecker.jsp">Vote checker</a>
+    <a href="sexChecker.jsp">Sex checker</a>
 </div>
 </body>
 </html>
