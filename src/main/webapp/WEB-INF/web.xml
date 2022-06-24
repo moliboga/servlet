@@ -23,4 +23,14 @@
     <servlet-name>vote</servlet-name>
     <url-pattern>/checkvoter</url-pattern>
   </servlet-mapping>
+
+  <filter>
+    <filter-name>logVoter</filter-name>
+    <filter-class>LogFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>logVoter</filter-name>
+    <servlet-name>vote</servlet-name>
+  </filter-mapping>
+
 </web-app>
