@@ -1,0 +1,26 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <servlet>
+    <servlet-name>vote</servlet-name>
+    <servlet-class>DemoServlet</servlet-class>
+    <init-param>
+      <param-name>errorTextColor</param-name>
+      <param-value>red</param-value>
+    </init-param>
+    <init-param>
+      <param-name>commonTextColor</param-name>
+      <param-value>#521406</param-value>
+    </init-param>
+    <init-param>
+      <param-name>welcomeTextColor</param-name>
+      <param-value>blue</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>vote</servlet-name>
+    <url-pattern>/checkvoter</url-pattern>
+  </servlet-mapping>
+</web-app>
