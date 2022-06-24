@@ -10,8 +10,9 @@
 
 <h1>Start page</h1>
 <div>
-    <a href="voteChecker.jsp">Vote checker</a>
-    <a href="sexChecker.jsp">Sex checker</a>
+    <a href="vote/voteChecker.jsp">Vote checker</a>
+    <a href="sex/sexChecker.jsp">Sex checker</a>
+    <a href="/json">Json</a>
 </div>
 </body>
 </html>

@@ -29,6 +29,24 @@
     <url-pattern>/checksex</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>json</servlet-name>
+    <servlet-class>JsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>json</servlet-name>
+    <url-pattern>/json</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>city</servlet-name>
+    <servlet-class>CityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>city</servlet-name>
+    <url-pattern>/city</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>logVoter</filter-name>
     <filter-class>LogFilter</filter-class>
