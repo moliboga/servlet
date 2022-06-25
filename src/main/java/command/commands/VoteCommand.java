@@ -1,7 +1,7 @@
 package command.commands;
 
-import command.ICommand;
-import command.IGetServletConfig;
+import command.Command;
+import command.GetServletConfig;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class VoteCommand implements ICommand, IGetServletConfig {
+public class VoteCommand implements Command, GetServletConfig {
     private ServletConfig config;
 
     @Override
@@ -26,9 +26,9 @@ public class VoteCommand implements ICommand, IGetServletConfig {
         RequestDispatcher requestDispatcher;
 
         if (age < 18){
-            requestDispatcher = req.getRequestDispatcher("voteCheckerBad.jsp");
+            requestDispatcher = req.getRequestDispatcher(req.getContextPath() + "/voteCheckerBad.jsp");
         } else {
-            requestDispatcher = req.getRequestDispatcher("voteCheckerGood.jsp");
+            requestDispatcher = req.getRequestDispatcher(req.getContextPath() + "/voteCheckerGood.jsp");
         }
 
         requestDispatcher.forward(req, res);

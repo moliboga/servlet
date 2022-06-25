@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandExecutor {
-    private static final Map<String, ICommand> commands = new HashMap<>();
+    private static final Map<String, Command> commands = new HashMap<>();
 
     static {
         commands.put("json", new JsonCommand());
@@ -18,7 +18,7 @@ public class CommandExecutor {
         commands.put("vote", new VoteCommand());
     }
 
-    public static ICommand getByName(String command) {
+    public static Command getByName(String command) {
         return commands.get(command);
     }
 }

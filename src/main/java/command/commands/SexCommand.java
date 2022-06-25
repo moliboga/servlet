@@ -1,27 +1,23 @@
 package command.commands;
 
-import command.ICommand;
+import command.Command;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class SexCommand implements ICommand {
+public class SexCommand implements Command {
     @Override
-    public void execute(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String age = req.getParameter("18");
         String agreement = req.getParameter("sexAddiction");
 
-        RequestDispatcher requestDispatcher;
-
         if (age == null || agreement == null){
-            requestDispatcher = req.getRequestDispatcher("NoSex.jsp");
-        } else {
-            requestDispatcher = req.getRequestDispatcher("YesSex.jsp");
+            res.sendRedirect(req.getContextPath() + "/noSex.jsp");
         }
-
-        requestDispatcher.forward(req, res);
+        else {
+            res.sendRedirect(req.getContextPath() + "/yesSex.jsp");
+        }
     }
 }

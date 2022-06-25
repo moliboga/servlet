@@ -2,6 +2,6 @@ package command;
 
 import javax.servlet.ServletConfig;
 
-public interface IGetServletConfig {
+public interface GetServletConfig {
     void setServletConfig(ServletConfig config);
 }

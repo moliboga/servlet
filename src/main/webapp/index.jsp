@@ -12,7 +12,8 @@
 <div>
     <a href="voteChecker.jsp">Vote checker</a>
     <a href="sexChecker.jsp">Sex checker</a>
-    <a href="/main?command=json">Json</a>
+    <a href="/api/json">Json</a>
+    <a href="city.jsp">City</a>
 </div>
 </body>
 </html>

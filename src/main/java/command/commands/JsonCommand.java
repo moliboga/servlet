@@ -1,7 +1,7 @@
 package command.commands;
 
 import com.google.gson.Gson;
-import command.ICommand;
+import command.Command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonCommand implements ICommand {
+public class JsonCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse res) throws IOException {

@@ -1,6 +1,6 @@
 import command.CommandExecutor;
-import command.ICommand;
-import command.IGetServletConfig;
+import command.Command;
+import command.GetServletConfig;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +12,11 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ICommand command = CommandExecutor.getByName(request.getParameter("command"));
-        if (command instanceof IGetServletConfig)
-            ((IGetServletConfig)command).setServletConfig(getServletConfig());
+        String requestUri = request.getRequestURI();
+        String commandStr = requestUri.substring(requestUri.lastIndexOf('/')+1);
+        Command command = CommandExecutor.getByName(commandStr);
+        if (command instanceof GetServletConfig)
+            ((GetServletConfig)command).setServletConfig(getServletConfig());
         command.execute(request, response);
     }
 }

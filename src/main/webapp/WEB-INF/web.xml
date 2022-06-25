@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>main</servlet-name>
-    <url-pattern>/main</url-pattern>
+    <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 
   <filter>
