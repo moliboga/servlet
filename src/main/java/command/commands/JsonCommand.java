@@ -1,8 +1,8 @@
-import com.google.gson.Gson;
+package command.commands;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+import com.google.gson.Gson;
+import command.ICommand;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -10,10 +10,10 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonServlet extends HttpServlet {
+public class JsonCommand implements ICommand {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+    @Override
+    public void execute(HttpServletRequest request, HttpServletResponse res) throws IOException {
         List<String> stringList = new ArrayList<>();
         stringList.add("first string");
         stringList.add("second string");

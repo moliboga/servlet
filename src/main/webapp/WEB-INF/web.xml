@@ -1,7 +1,7 @@
 <web-app>
   <servlet>
-    <servlet-name>vote</servlet-name>
-    <servlet-class>VoteServlet</servlet-class>
+    <servlet-name>main</servlet-name>
+    <servlet-class>MainServlet</servlet-class>
     <init-param>
       <param-name>errorTextColor</param-name>
       <param-value>red</param-value>
@@ -16,44 +16,17 @@
     </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>vote</servlet-name>
-    <url-pattern>/checkvoter</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>sex</servlet-name>
-    <servlet-class>SexServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>sex</servlet-name>
-    <url-pattern>/checksex</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>json</servlet-name>
-    <servlet-class>JsonServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>json</servlet-name>
-    <url-pattern>/json</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>city</servlet-name>
-    <servlet-class>CityServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>city</servlet-name>
-    <url-pattern>/city</url-pattern>
+    <servlet-name>main</servlet-name>
+    <url-pattern>/main</url-pattern>
   </servlet-mapping>
 
   <filter>
-    <filter-name>logVoter</filter-name>
+    <filter-name>log</filter-name>
     <filter-class>LogFilter</filter-class>
   </filter>
   <filter-mapping>
-    <filter-name>logVoter</filter-name>
-    <servlet-name>vote</servlet-name>
+    <filter-name>log</filter-name>
+    <servlet-name>main</servlet-name>
   </filter-mapping>
 
 </web-app>

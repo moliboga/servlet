@@ -1,16 +1,16 @@
-import org.json.JSONObject;
+package command.commands;
+
+import command.ICommand;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class CityServlet extends HttpServlet {
-
+public class CityCommand implements ICommand {
     private String key = "a0b7ddc84eb9ea09371b738461cc2e0f";
 
     public String getJsonCity(String name) {
@@ -22,8 +22,8 @@ public class CityServlet extends HttpServlet {
         return response.getBody();
     }
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+    @Override
+    public void execute(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String jsonString = "";
 
         String cityName = req.getParameter("cityName");

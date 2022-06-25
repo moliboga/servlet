@@ -12,7 +12,7 @@
 <div>
     <a href="voteChecker.jsp">Vote checker</a>
     <a href="sexChecker.jsp">Sex checker</a>
-    <a href="/json">Json</a>
+    <a href="/main?command=json">Json</a>
 </div>
 </body>
 </html>
